@@ -17,7 +17,7 @@ function App() {
     // realtime db
     useEffect(() => {
         const db = getDatabase()
-        const dataRef = ref(db, 'dataset_mangga')
+        const dataRef = ref(db, 'result')
         onValue(dataRef, (snapshot) => {
             setMangga(snapshot.val())
             setTotalMangga(snapshot.val().length)
